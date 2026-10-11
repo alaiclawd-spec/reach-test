@@ -1,0 +1,17 @@
+name: reach
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  reach:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run the reach test
+        run: python3 reach.py | tee cloud.csv
+      - uses: actions/upload-artifact@v4
+        with:
+          name: cloud-reach
+          path: cloud.csv

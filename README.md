@@ -1,0 +1,1 @@
+# reach-test\n\nThrowaway test: one request to each of a list of public data sites, to compare answers from a cloud machine and a home connection. No keys are sent.\n
